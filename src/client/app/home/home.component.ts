@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { APICallerService } from '../shared/api-caller/api-caller.service';
 
 /**
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
 
     channelsData: any;
     errorMessage: string;
+    timeArray: any[] = ['7:00 PM', '7:30 PM', '8:00 PM', '8:30 PM', '9:00 PM']
 
     /**
      * Creates an instance of the HomeComponent with the injected
@@ -21,26 +23,13 @@ export class HomeComponent implements OnInit {
      *
      * @param {APICallerService} APICallerService - The injected APICallerService.
      */
-    constructor(public apiCaller: APICallerService) {}
+    constructor(public apiCaller: APICallerService, public router: Router) {}
 
     /**
      * Get the names OnInit
      */
     ngOnInit() {
-        this.getNames();
-    }
-
-    /**
-     * Handle the APICallerService observable
-     */
-    getNames() {
-        this.apiCaller.getChannelsData()
-            .subscribe(
-                channelsData => {
-                    console.log(channelsData);
-                    this.channelsData = channelsData.channels;
-                }, error => this.errorMessage = <any>error
-            );
+        // Items to load on init
     }
 
 }

@@ -1,0 +1,61 @@
+.overflow-x-scroll {
+    overflow-x: scroll;
+}
+
+.float-left {
+    float: left;
+}
+
+.program-container:last-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.clipped-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.height-100px {
+    line-height: 100px;
+}
+
+.padding-left-right-10px {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.time-line-wrapper {
+    line-height: 30px;
+    background: #242424;
+    color: darkgrey;
+    box-shadow: 0 2px 4px 0 #242424;
+}
+
+.top-bottom-border {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.border-color-black {
+    border-color: black;
+}
+
+.border-color-darkgrey {
+    border-color: darkgrey;
+}
+
+.program-container:last-child .program {
+    width: 100% !important;
+}
+
+.program-container .program {
+    border-right: 0.5px solid darkgrey;
+    border-left: 0.5px solid darkgrey;
+}
+
+.color-white {
+    color: white !important;
+}

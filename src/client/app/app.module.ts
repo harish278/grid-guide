@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HomeModule } from './home/home.module';
+import { GridGuideModule } from './grid-guide/grid-guide.module';
 import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, AppRoutingModule, HomeModule, SharedModule.forRoot()],
+  imports: [BrowserModule, HttpModule, AppRoutingModule, HomeModule, GridGuideModule, SharedModule.forRoot()],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,

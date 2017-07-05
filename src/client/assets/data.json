@@ -10,26 +10,30 @@
                     "program_id": "1",
                     "program_name": "South Park",
                     "start_time": "7:00 PM",
-                    "duration_hours": "0.5",
-                    "is_recordable": false
+                    "duration_hours": "1",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "2",
                     "program_name": "The Daily Show with Trevor Noah",
                     "start_time": "7:30 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "4",
                     "program_name": "At Midnight with Chris Harwick",
                     "start_time": "8:30 PM",
-                    "duration_hours": "2.5",
-                    "is_recordable": false
+                    "duration_hours": "2",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }
             ]
         }, {
@@ -43,25 +47,29 @@
                     "program_name": "South Park",
                     "start_time": "7:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "2",
                     "program_name": "The Daily Show with Trevor Noah",
                     "start_time": "7:30 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
-                    "duration_hours": "0.5",
-                    "is_recordable": false
+                    "duration_hours": "1",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "4",
                     "program_name": "At Midnight with Chris Harwick",
                     "start_time": "8:30 PM",
-                    "duration_hours": "2.5",
-                    "is_recordable": false
+                    "duration_hours": "2",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }
             ]
         }, {
@@ -75,25 +83,29 @@
                     "program_name": "South Park",
                     "start_time": "7:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "2",
                     "program_name": "The Daily Show with Trevor Noah",
                     "start_time": "7:30 PM",
-                    "duration_hours": "0.5",
-                    "is_recordable": false
+                    "duration_hours": "1",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "4",
                     "program_name": "At Midnight with Chris Harwick",
                     "start_time": "8:30 PM",
-                    "duration_hours": "2.5",
-                    "is_recordable": false
+                    "duration_hours": "0.5",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }
             ]
         }, {
@@ -107,25 +119,29 @@
                     "program_name": "South Park",
                     "start_time": "7:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "2",
                     "program_name": "The Daily Show with Trevor Noah",
                     "start_time": "7:30 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "4",
                     "program_name": "At Midnight with Chris Harwick",
                     "start_time": "8:30 PM",
-                    "duration_hours": "2.5",
-                    "is_recordable": false
+                    "duration_hours": "1.5",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }
             ]
         }, {
@@ -139,25 +155,29 @@
                     "program_name": "South Park",
                     "start_time": "7:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "2",
                     "program_name": "The Daily Show with Trevor Noah",
                     "start_time": "7:30 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "4",
                     "program_name": "At Midnight with Chris Harwick",
                     "start_time": "8:30 PM",
-                    "duration_hours": "2.5",
-                    "is_recordable": false
+                    "duration_hours": "1.5",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }
             ]
         }, {
@@ -171,25 +191,29 @@
                     "program_name": "South Park",
                     "start_time": "7:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "2",
                     "program_name": "The Daily Show with Trevor Noah",
                     "start_time": "7:30 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "4",
                     "program_name": "At Midnight with Chris Harwick",
                     "start_time": "8:30 PM",
-                    "duration_hours": "2.5",
-                    "is_recordable": false
+                    "duration_hours": "1.5",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }
             ]
         }, {
@@ -203,25 +227,29 @@
                     "program_name": "South Park",
                     "start_time": "7:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "2",
                     "program_name": "The Daily Show with Trevor Noah",
                     "start_time": "7:30 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false
+                    "is_recordable": false,
+                    "is_new_content": false
                 }, {
                     "program_id": "4",
                     "program_name": "At Midnight with Chris Harwick",
                     "start_time": "8:30 PM",
-                    "duration_hours": "2.5",
-                    "is_recordable": false
+                    "duration_hours": "1.5",
+                    "is_recordable": false,
+                    "is_new_content": false
                 }
             ]
         }
