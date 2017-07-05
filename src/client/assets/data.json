@@ -2,15 +2,15 @@
     "channels": [
         {
             "channel_id": 1,
-            "name": "ESPN",
-            "image_url": "",
+            "name": "c@",
+            "image_url": "../assets/images/cc.png",
             "is_liked": true,
             "programs_list": [
                 {
                     "program_id": "1",
                     "program_name": "South Park",
                     "start_time": "7:00 PM",
-                    "duration_hours": "1",
+                    "duration_hours": "0.5",
                     "is_recordable": true,
                     "on_now": true,
                     "is_new_content": false
@@ -19,208 +19,208 @@
                     "program_name": "The Daily Show with Trevor Noah",
                     "start_time": "7:30 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": false,
+                    "is_recordable": true,
+                    "on_now": false,
                     "is_new_content": false
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
                     "duration_hours": "0.5",
-                    "is_recordable": true,
-                    "is_new_content": false
+                    "is_recordable": false,
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "4",
                     "program_name": "At Midnight with Chris Harwick",
                     "start_time": "8:30 PM",
                     "duration_hours": "2",
                     "is_recordable": true,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": false
                 }
             ]
         }, {
             "channel_id": 2,
             "name": "ESPN",
-            "image_url": "",
+            "image_url": "../assets/images/espn.png",
             "is_liked": true,
             "programs_list": [
                 {
                     "program_id": "1",
-                    "program_name": "South Park",
+                    "program_name": "College Football Scoreboard Presented by Honda",
                     "start_time": "7:00 PM",
-                    "duration_hours": "0.5",
+                    "duration_hours": "1.25",
                     "is_recordable": false,
-                    "is_new_content": true
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "2",
-                    "program_name": "The Daily Show with Trevor Noah",
+                    "program_name": "College Football Scoreboard Presented by Honda",
                     "start_time": "7:30 PM",
-                    "duration_hours": "0.5",
+                    "duration_hours": "1.25",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
-                    "duration_hours": "1",
+                    "duration_hours": "1.5",
                     "is_recordable": false,
-                    "is_new_content": true
-                }, {
-                    "program_id": "4",
-                    "program_name": "At Midnight with Chris Harwick",
-                    "start_time": "8:30 PM",
-                    "duration_hours": "2",
-                    "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": true,
+                    "on_now": false,
+                    "is_empty": false
                 }
             ]
         }, {
             "channel_id": 3,
-            "name": "ESPN",
-            "image_url": "",
+            "name": "ESPN 2",
+            "image_url": "../assets/images/espn2.png",
             "is_liked": true,
             "programs_list": [
                 {
                     "program_id": "1",
-                    "program_name": "South Park",
+                    "program_name": "College Football Inside Edition",
                     "start_time": "7:00 PM",
-                    "duration_hours": "0.5",
+                    "duration_hours": "0.75",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "2",
-                    "program_name": "The Daily Show with Trevor Noah",
+                    "program_name": "ESPN College Football - Wyoming vs. Nebraska",
                     "start_time": "7:30 PM",
-                    "duration_hours": "1",
+                    "duration_hours": "1.75",
                     "is_recordable": false,
-                    "is_new_content": true
+                    "is_new_content": true,
+                    "on_now": false,
+                    "is_empty": false
                 }, {
                     "program_id": "3",
-                    "program_name": "Workaholics",
+                    "program_name": "College Football Inside Edition",
                     "start_time": "8:00 PM",
-                    "duration_hours": "0.5",
+                    "duration_hours": "0.75",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "4",
-                    "program_name": "At Midnight with Chris Harwick",
+                    "program_name": "ESPN College Football - Wyoming vs. Nebraska (High Lights)",
                     "start_time": "8:30 PM",
                     "duration_hours": "0.5",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }
             ]
         }, {
             "channel_id": 4,
-            "name": "ESPN",
-            "image_url": "",
+            "name": "ESPN 3",
+            "image_url": "../assets/images/espn3.png",
             "is_liked": false,
             "programs_list": [
                 {
                     "program_id": "1",
-                    "program_name": "South Park",
+                    "program_name": "See All Available Content",
                     "start_time": "7:00 PM",
-                    "duration_hours": "0.5",
+                    "duration_hours": "2",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "2",
-                    "program_name": "The Daily Show with Trevor Noah",
+                    "program_name": "See All Available Content",
                     "start_time": "7:30 PM",
-                    "duration_hours": "0.5",
+                    "duration_hours": "3",
                     "is_recordable": false,
-                    "is_new_content": true
-                }, {
-                    "program_id": "3",
-                    "program_name": "Workaholics",
-                    "start_time": "8:00 PM",
-                    "duration_hours": "0.5",
-                    "is_recordable": false,
-                    "is_new_content": false
-                }, {
-                    "program_id": "4",
-                    "program_name": "At Midnight with Chris Harwick",
-                    "start_time": "8:30 PM",
-                    "duration_hours": "1.5",
-                    "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }
             ]
         }, {
             "channel_id": 6,
-            "name": "ESPN",
-            "image_url": "",
+            "name": "Maker",
+            "image_url": "../assets/images/maker.png",
             "is_liked": false,
             "programs_list": [
                 {
                     "program_id": "1",
-                    "program_name": "South Park",
+                    "program_name": "See All Available Content",
                     "start_time": "7:00 PM",
-                    "duration_hours": "0.5",
+                    "duration_hours": "2",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "2",
-                    "program_name": "The Daily Show with Trevor Noah",
+                    "program_name": "See All Available Content",
                     "start_time": "7:30 PM",
-                    "duration_hours": "0.5",
+                    "duration_hours": "3",
                     "is_recordable": false,
-                    "is_new_content": false
-                }, {
-                    "program_id": "3",
-                    "program_name": "Workaholics",
-                    "start_time": "8:00 PM",
-                    "duration_hours": "0.5",
-                    "is_recordable": false,
-                    "is_new_content": false
-                }, {
-                    "program_id": "4",
-                    "program_name": "At Midnight with Chris Harwick",
-                    "start_time": "8:30 PM",
-                    "duration_hours": "1.5",
-                    "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }
             ]
         }, {
             "channel_id": 7,
-            "name": "ESPN",
-            "image_url": "",
+            "name": "Travel",
+            "image_url": "../assets/images/travel.png",
             "is_liked": false,
             "programs_list": [
                 {
                     "program_id": "1",
-                    "program_name": "South Park",
+                    "program_name": "Bizzare Foods with Andrew Zimmern",
                     "start_time": "7:00 PM",
-                    "duration_hours": "0.5",
+                    "duration_hours": "1",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": true,
+                    "on_now": false,
+                    "is_empty": false
                 }, {
                     "program_id": "2",
-                    "program_name": "The Daily Show with Trevor Noah",
+                    "program_name": "Extreme RVs",
                     "start_time": "7:30 PM",
                     "duration_hours": "0.5",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": true,
+                    "on_now": false,
+                    "is_empty": false
                 }, {
                     "program_id": "3",
-                    "program_name": "Workaholics",
+                    "program_name": "Extreme RVs",
                     "start_time": "8:00 PM",
                     "duration_hours": "0.5",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "4",
-                    "program_name": "At Midnight with Chris Harwick",
+                    "program_name": "treehouse masters",
                     "start_time": "8:30 PM",
                     "duration_hours": "1.5",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }
             ]
         }, {
             "channel_id": 8,
             "name": "ESPN",
-            "image_url": "",
+            "image_url": "../assets/images/espn.png",
             "is_liked": false,
             "programs_list": [
                 {
@@ -229,28 +229,36 @@
                     "start_time": "7:00 PM",
                     "duration_hours": "0.5",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "2",
                     "program_name": "The Daily Show with Trevor Noah",
                     "start_time": "7:30 PM",
                     "duration_hours": "0.5",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
                     "start_time": "8:00 PM",
                     "duration_hours": "0.5",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }, {
                     "program_id": "4",
                     "program_name": "At Midnight with Chris Harwick",
                     "start_time": "8:30 PM",
                     "duration_hours": "1.5",
                     "is_recordable": false,
-                    "is_new_content": false
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
                 }
             ]
         }

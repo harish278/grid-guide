@@ -2,9 +2,13 @@
     <div class="col-xs-2 left-right-padding-0 line-height-80px">
         <div class="channel top-bottom-border border-color-black" *ngFor="let channel of channelsData; let channelIndex = 'index'">
             <div class="row left-right-margin-0 align-center padding-left-right-10px" (click)="toggleLiked(channelIndex)">
-                <span class="on-now-icon" *ngIf="channel.is_liked"><img class="" src="../assets/images/liked.png" alt=""></span>
-                <span class="on-now-icon" *ngIf="!channel.is_liked"><img class="" src="../assets/images/unliked.png" alt=""></span>
-                {{channel.name}}
+                <div class="col-xs-3 left-right-padding-0">
+                    <span class="" *ngIf="channel.is_liked"><img class="" src="../assets/images/liked.png" alt=""></span>
+                    <span class="" *ngIf="!channel.is_liked"><img class="" src="../assets/images/unliked.png" alt=""></span>
+                </div>
+                <div class="col-xs-9 left-right-padding-0">
+                    <span class=""><img class="" [src]="channel.image_url" alt=""></span>
+                </div>
             </div>
         </div>
     </div>
@@ -24,7 +28,7 @@
                             {{program.program_name}}
                         </div>
                         <div class="row left-right-margin-0 line-height-30px">
-                            <span>&nbsp;</span>
+                            <span *ngIf="program.is_empty">&nbsp;</span>
                             <span class="on-now-icon" *ngIf="program.on_now"><img class="utility-image" src="../assets/images/on-now-icon.png" alt=""></span>
                             <span class="record-icon" *ngIf="program.is_recordable"><img class="utility-image" src="../assets/images/record-icon.png" alt=""></span>
                             <span class="new-icon" *ngIf="program.is_new_content && (progIndex > 0)"><img class="utility-image" src="../assets/images/new-icon.png" alt=""></span>
