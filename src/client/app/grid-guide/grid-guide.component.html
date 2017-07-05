@@ -1,14 +1,14 @@
 <div class="row left-right-margin-0 grid-guide">
-    <div class="col-xs-3 left-right-padding-0 line-height-80px">
+    <div class="col-xs-2 left-right-padding-0 line-height-80px">
         <div class="channel top-bottom-border border-color-black" *ngFor="let channel of channelsData; let channelIndex = 'index'">
-            <div class="row left-right-margin-0 padding-left-right-10px" (click)="toggleLiked(channelIndex)">
+            <div class="row left-right-margin-0 align-center padding-left-right-10px" (click)="toggleLiked(channelIndex)">
                 <span class="on-now-icon" *ngIf="channel.is_liked"><img class="" src="../assets/images/liked.png" alt=""></span>
                 <span class="on-now-icon" *ngIf="!channel.is_liked"><img class="" src="../assets/images/unliked.png" alt=""></span>
                 {{channel.name}}
             </div>
         </div>
     </div>
-    <div class="col-xs-9 line-height-80px left-right-padding-0 overflow-x-scroll">
+    <div class="col-xs-10 line-height-80px left-right-padding-0 overflow-x-scroll">
         <div class="row left-right-margin-0 width-7200px top-bottom-border border-color-darkgrey" *ngFor="let channel of channelsData; let channelIndex = 'index'">
             <div class="row time-line-wrapper left-right-margin-0 bottom-border border-color-darkgrey" *ngIf="channelIndex === 0">
                 <div class="" *ngFor="let time of timeArray">
