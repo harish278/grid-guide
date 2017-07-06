@@ -26,11 +26,10 @@
                     <div class="program border-right-left-darkgrey padding-left-right-10px" [class.color-white]="progIndex === 0"
                         [style.width]="(5*(program.duration_hours*60))+'px'"
                         [style.left]="(5*((differentialHour < 0 ? (program.start_time.split(':')[0]*60 + (differentialHour*-1)*60 - differentialMins)
-                        : (program.start_time.split(':')[0]*60 - differentialHour*60 - differentialMins)) +
-                        ((progIndex === 0 ? program.start_time.split(':')[1].split(' ')[0] :
-                        (program.start_time.split(':')[1].split(' ')[0]*1)-1)*1)))+'px'"
-                        id="{{'program-'+channel.channel_id+'-'+program.program_id}}">
-                        <div class="row left-right-margin-0 line-height-50px clipped-title" title="{{program.program_name}} {{program.start_time}} {{program.end_time}}">
+                        : (program.start_time.split(':')[0]*60 - differentialHour*60 - differentialMins)) + (program.start_time.split(':')[1].split(' ')[0]*1)))+'px'"
+                        id="{{'program-'+channel.channel_id+'-'+program.program_id}}"
+                    >
+                        <div class="row left-right-margin-0 line-height-50px clipped-title" title="{{program.program_name}} Timings:{{program.start_time}} to {{program.end_time}}">
                             {{program.program_name}}
                         </div>
                         <div class="row left-right-margin-0 line-height-30px">
