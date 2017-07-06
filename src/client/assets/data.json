@@ -9,7 +9,8 @@
                 {
                     "program_id": "1",
                     "program_name": "South Park",
-                    "start_time": "7:00 PM",
+                    "start_time": "1:00 PM",
+                    "end_time": "1:30 PM",
                     "duration_hours": "0.5",
                     "is_recordable": true,
                     "on_now": true,
@@ -17,7 +18,8 @@
                 }, {
                     "program_id": "2",
                     "program_name": "The Daily Show with Trevor Noah",
-                    "start_time": "7:30 PM",
+                    "start_time": "1:31 PM",
+                    "end_time": "2:00 PM",
                     "duration_hours": "0.5",
                     "is_recordable": true,
                     "on_now": false,
@@ -25,16 +27,84 @@
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
-                    "start_time": "8:00 PM",
+                    "start_time": "2:01 PM",
+                    "end_time": "2:30 PM",
                     "duration_hours": "0.5",
                     "is_recordable": false,
                     "is_new_content": false,
                     "on_now": false,
                     "is_empty": true
                 }, {
-                    "program_id": "4",
+                    "program_id": "14",
                     "program_name": "At Midnight with Chris Harwick",
-                    "start_time": "8:30 PM",
+                    "start_time": "2:31 PM",
+                    "end_time": "3:30 PM",
+                    "duration_hours": "2",
+                    "is_recordable": true,
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": false
+                }, {
+                    "program_id": "4",
+                    "program_name": "South Park",
+                    "start_time": "3:31 PM",
+                    "end_time": "4:30 PM",
+                    "duration_hours": "1.5",
+                    "is_recordable": true,
+                    "on_now": false,
+                    "is_new_content": true
+                }, {
+                    "program_id": "5",
+                    "program_name": "The Daily Show with Trevor Noah",
+                    "start_time": "4:31 PM",
+                    "end_time": "5:00 PM",
+                    "duration_hours": "0.5",
+                    "is_recordable": true,
+                    "on_now": false,
+                    "is_new_content": false
+                }, {
+                    "program_id": "6",
+                    "program_name": "Workaholics",
+                    "start_time": "5:01 PM",
+                    "end_time": "7:00 PM",
+                    "duration_hours": "2.0",
+                    "is_recordable": false,
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
+                }, {
+                    "program_id": "7",
+                    "program_name": "South Park",
+                    "start_time": "7:01 PM",
+                    "end_time": "7:30 PM",
+                    "duration_hours": "0.5",
+                    "is_recordable": true,
+                    "on_now": true,
+                    "is_new_content": false
+                }, {
+                    "program_id": "8",
+                    "program_name": "The Daily Show with Trevor Noah",
+                    "start_time": "7:31 PM",
+                    "end_time": "8:00 PM",
+                    "duration_hours": "0.5",
+                    "is_recordable": true,
+                    "on_now": false,
+                    "is_new_content": false
+                }, {
+                    "program_id": "12",
+                    "program_name": "Workaholics",
+                    "start_time": "8:01 PM",
+                    "end_time": "8:30 PM",
+                    "duration_hours": "0.5",
+                    "is_recordable": false,
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
+                }, {
+                    "program_id": "13",
+                    "program_name": "At Midnight with Chris Harwick",
+                    "start_time": "8:31 PM",
+                    "end_time": "9:30 PM",
                     "duration_hours": "2",
                     "is_recordable": true,
                     "is_new_content": false,
@@ -51,7 +121,8 @@
                 {
                     "program_id": "1",
                     "program_name": "College Football Scoreboard Presented by Honda",
-                    "start_time": "7:00 PM",
+                    "start_time": "2:00 PM",
+                    "end_time": "3:15 PM",
                     "duration_hours": "1.25",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -60,7 +131,8 @@
                 }, {
                     "program_id": "2",
                     "program_name": "College Football Scoreboard Presented by Honda",
-                    "start_time": "7:30 PM",
+                    "start_time": "3:16 PM",
+                    "end_time": "4:30 PM",
                     "duration_hours": "1.25",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -69,7 +141,38 @@
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
-                    "start_time": "8:00 PM",
+                    "start_time": "4:31 PM",
+                    "end_time": "6:00 PM",
+                    "duration_hours": "1.5",
+                    "is_recordable": false,
+                    "is_new_content": true,
+                    "on_now": false,
+                    "is_empty": false
+                }, {
+                    "program_id": "4",
+                    "program_name": "College Football Scoreboard Presented by Honda",
+                    "start_time": "6:01 PM",
+                    "end_time": "8:15 PM",
+                    "duration_hours": "1.25",
+                    "is_recordable": false,
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
+                }, {
+                    "program_id": "5",
+                    "program_name": "College Football Scoreboard Presented by Honda",
+                    "start_time": "8:16 PM",
+                    "end_time": "9:30 PM",
+                    "duration_hours": "1.25",
+                    "is_recordable": false,
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
+                }, {
+                    "program_id": "6",
+                    "program_name": "Workaholics",
+                    "start_time": "9:31 PM",
+                    "end_time": "11:00 PM",
                     "duration_hours": "1.5",
                     "is_recordable": false,
                     "is_new_content": true,
@@ -86,7 +189,8 @@
                 {
                     "program_id": "1",
                     "program_name": "College Football Inside Edition",
-                    "start_time": "7:00 PM",
+                    "start_time": "2:00 PM",
+                    "end_time": "2:45 PM",
                     "duration_hours": "0.75",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -95,7 +199,8 @@
                 }, {
                     "program_id": "2",
                     "program_name": "ESPN College Football - Wyoming vs. Nebraska",
-                    "start_time": "7:30 PM",
+                    "start_time": "2:46 PM",
+                    "end_time": "4:30 PM",
                     "duration_hours": "1.75",
                     "is_recordable": false,
                     "is_new_content": true,
@@ -104,7 +209,8 @@
                 }, {
                     "program_id": "3",
                     "program_name": "College Football Inside Edition",
-                    "start_time": "8:00 PM",
+                    "start_time": "4:31 PM",
+                    "end_time": "5:15 PM",
                     "duration_hours": "0.75",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -113,8 +219,49 @@
                 }, {
                     "program_id": "4",
                     "program_name": "ESPN College Football - Wyoming vs. Nebraska (High Lights)",
-                    "start_time": "8:30 PM",
+                    "start_time": "5:16 PM",
+                    "end_time": "6:45 PM",
                     "duration_hours": "0.5",
+                    "is_recordable": false,
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
+                }, {
+                    "program_id": "5",
+                    "program_name": "College Football Inside Edition",
+                    "start_time": "6:46 PM",
+                    "end_time": "7:45 PM",
+                    "duration_hours": "1",
+                    "is_recordable": false,
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
+                }, {
+                    "program_id": "6",
+                    "program_name": "ESPN College Football - Wyoming vs. Nebraska",
+                    "start_time": "7:46 PM",
+                    "end_time": "9:30 PM",
+                    "duration_hours": "1.75",
+                    "is_recordable": false,
+                    "is_new_content": true,
+                    "on_now": false,
+                    "is_empty": false
+                }, {
+                    "program_id": "8",
+                    "program_name": "College Football Inside Edition",
+                    "start_time": "9:31 PM",
+                    "end_time": "10:15 PM",
+                    "duration_hours": "0.75",
+                    "is_recordable": false,
+                    "is_new_content": false,
+                    "on_now": false,
+                    "is_empty": true
+                }, {
+                    "program_id": "9",
+                    "program_name": "ESPN College Football - Sun vs. LV",
+                    "start_time": "10:16 PM",
+                    "end_time": "0:45 AM",
+                    "duration_hours": "2.5",
                     "is_recordable": false,
                     "is_new_content": false,
                     "on_now": false,
@@ -131,6 +278,7 @@
                     "program_id": "1",
                     "program_name": "See All Available Content",
                     "start_time": "7:00 PM",
+                    "end_time": "9:00 PM",
                     "duration_hours": "2",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -139,7 +287,8 @@
                 }, {
                     "program_id": "2",
                     "program_name": "See All Available Content",
-                    "start_time": "7:30 PM",
+                    "start_time": "9:01 PM",
+                    "end_time": "11:00 PM",
                     "duration_hours": "3",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -157,6 +306,7 @@
                     "program_id": "1",
                     "program_name": "See All Available Content",
                     "start_time": "7:00 PM",
+                    "end_time": "9:00 PM",
                     "duration_hours": "2",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -165,7 +315,8 @@
                 }, {
                     "program_id": "2",
                     "program_name": "See All Available Content",
-                    "start_time": "7:30 PM",
+                    "start_time": "9:01 PM",
+                    "end_time": "11:00 PM",
                     "duration_hours": "3",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -183,6 +334,7 @@
                     "program_id": "1",
                     "program_name": "Bizzare Foods with Andrew Zimmern",
                     "start_time": "7:00 PM",
+                    "end_time": "8:00 PM",
                     "duration_hours": "1",
                     "is_recordable": false,
                     "is_new_content": true,
@@ -191,7 +343,8 @@
                 }, {
                     "program_id": "2",
                     "program_name": "Extreme RVs",
-                    "start_time": "7:30 PM",
+                    "start_time": "8:01 PM",
+                    "end_time": "8:30 PM",
                     "duration_hours": "0.5",
                     "is_recordable": false,
                     "is_new_content": true,
@@ -200,7 +353,8 @@
                 }, {
                     "program_id": "3",
                     "program_name": "Extreme RVs",
-                    "start_time": "8:00 PM",
+                    "start_time": "8:31 PM",
+                    "end_time": "9:00 PM",
                     "duration_hours": "0.5",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -209,7 +363,8 @@
                 }, {
                     "program_id": "4",
                     "program_name": "treehouse masters",
-                    "start_time": "8:30 PM",
+                    "start_time": "9:01 PM",
+                    "end_time": "10:30 PM",
                     "duration_hours": "1.5",
                     "is_recordable": false,
                     "is_new_content": false,
@@ -225,18 +380,20 @@
             "programs_list": [
                 {
                     "program_id": "1",
-                    "program_name": "South Park",
+                    "program_name": "College Football Scoreboard Presented by Honda",
                     "start_time": "7:00 PM",
-                    "duration_hours": "0.5",
+                    "end_time": "8:15 PM",
+                    "duration_hours": "1.25",
                     "is_recordable": false,
                     "is_new_content": false,
                     "on_now": false,
                     "is_empty": true
                 }, {
                     "program_id": "2",
-                    "program_name": "The Daily Show with Trevor Noah",
-                    "start_time": "7:30 PM",
-                    "duration_hours": "0.5",
+                    "program_name": "College Football Scoreboard Presented by Honda",
+                    "start_time": "8:16 PM",
+                    "end_time": "9:30 PM",
+                    "duration_hours": "1.25",
                     "is_recordable": false,
                     "is_new_content": false,
                     "on_now": false,
@@ -244,21 +401,13 @@
                 }, {
                     "program_id": "3",
                     "program_name": "Workaholics",
-                    "start_time": "8:00 PM",
-                    "duration_hours": "0.5",
-                    "is_recordable": false,
-                    "is_new_content": false,
-                    "on_now": false,
-                    "is_empty": true
-                }, {
-                    "program_id": "4",
-                    "program_name": "At Midnight with Chris Harwick",
-                    "start_time": "8:30 PM",
+                    "start_time": "9:31 PM",
+                    "end_time": "11:00 PM",
                     "duration_hours": "1.5",
                     "is_recordable": false,
-                    "is_new_content": false,
+                    "is_new_content": true,
                     "on_now": false,
-                    "is_empty": true
+                    "is_empty": false
                 }
             ]
         }

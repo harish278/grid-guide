@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-10 line-height-80px left-right-padding-0 overflow-x-scroll">
+    <div id="programs-schedule" class="col-xs-10 line-height-80px left-right-padding-0 overflow-x-scroll">
         <div class="row left-right-margin-0 width-7200px top-bottom-border border-color-darkgrey" *ngFor="let channel of channelsData; let channelIndex = 'index'">
             <div class="row time-line-wrapper left-right-margin-0 bottom-border border-color-darkgrey" *ngIf="channelIndex === 0">
                 <div class="" *ngFor="let time of timeArray">
@@ -21,10 +21,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row left-right-margin-0 width-7200px">
+            <div class="row relative-postion left-right-margin-0 width-7200px">
                 <div class="program-container" *ngFor="let program of channel.programs_list; let progIndex = 'index'">
-                    <div class="float-left program border-right-left-darkgrey padding-left-right-10px" [class.color-white]="progIndex === 0" [style.width]="(5*(program.duration_hours*60))+'px'" id="{{'program-'+channel.channel_id+'-'+program.program_id}}">
-                        <div class="row left-right-margin-0 line-height-50px clipped-title">
+                    <div class="program border-right-left-darkgrey padding-left-right-10px" [class.color-white]="progIndex === 0"
+                        [style.width]="(5*(program.duration_hours*60))+'px'"
+                        [style.left]="(5*((differentialHour < 0 ? (program.start_time.split(':')[0]*60 + (differentialHour*-1)*60 - differentialMins)
+                        : (program.start_time.split(':')[0]*60 - differentialHour*60 - differentialMins)) +
+                        ((progIndex === 0 ? program.start_time.split(':')[1].split(' ')[0] :
+                        (program.start_time.split(':')[1].split(' ')[0]*1)-1)*1)))+'px'"
+                        id="{{'program-'+channel.channel_id+'-'+program.program_id}}">
+                        <div class="row left-right-margin-0 line-height-50px clipped-title" title="{{program.program_name}} {{program.start_time}} {{program.end_time}}">
                             {{program.program_name}}
                         </div>
                         <div class="row left-right-margin-0 line-height-30px">

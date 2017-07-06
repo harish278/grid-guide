@@ -6,10 +6,13 @@
     float: left;
 }
 
-.program-container:last-child {
+/*.program-container:last-child {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}*/
+.program {
+    position: absolute;
 }
 
 .clipped-title {
@@ -95,4 +98,9 @@
 
 .align-center {
     text-align: center;
+}
+
+.relative-postion {
+    position: relative;
+    height: 80px;
 }
