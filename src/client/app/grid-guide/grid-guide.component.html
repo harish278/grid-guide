@@ -13,7 +13,9 @@
         </div>
     </div>
     <div id="programs-schedule" class="col-xs-10 line-height-80px left-right-padding-0 overflow-x-scroll">
-        <div class="row channels-program left-right-margin-0 width-7200px top-bottom-border border-color-darkgrey" *ngFor="let channel of gridGuideData; let channelIndex = 'index'">
+        <div class="row channels-program left-right-margin-0 top-bottom-border border-color-darkgrey" *ngFor="let channel of gridGuideData; let channelIndex = 'index'"
+            [style.width]="programsDisplayWidth+'px'"
+        >
             <div class="row time-line-wrapper left-right-margin-0 bottom-border border-color-darkgrey" *ngIf="channelIndex === 0">
                 <div class="time-line-array" *ngFor="let time of timeArray">
                     <div class="time-line-time border-right-left-darkgrey padding-left-right-10px float-left" [style.width]="'150px'">
