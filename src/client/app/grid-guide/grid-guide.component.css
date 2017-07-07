@@ -6,11 +6,10 @@
     float: left;
 }
 
-/*.program-container:last-child {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}*/
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
 .program {
     position: absolute;
 }
@@ -35,7 +34,12 @@
     background: #242424;
     color: darkgrey;
     box-shadow: 0 2px 4px 0 #242424;
+    /*position: relative;*/
 }
+
+/*.time-line-time {
+    position: absolute;
+}*/
 
 .top-bottom-border {
     border-top: 1px solid;
@@ -102,5 +106,16 @@
 
 .relative-postion {
     position: relative;
+}
+
+/*.channels-program:first-child .relative-postion {
+    margin-top: 30px;
+}*/
+
+.height-80px {
     height: 80px;
 }
+
+/*.time-line-array {
+    position: relative;
+}*/

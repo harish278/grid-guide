@@ -1,6 +1,6 @@
 <div class="row left-right-margin-0 grid-guide">
     <div class="col-xs-2 left-right-padding-0 line-height-80px">
-        <div class="channel top-bottom-border border-color-black" *ngFor="let channel of channelsData; let channelIndex = 'index'">
+        <div class="channel top-bottom-border border-color-black" *ngFor="let channel of gridGuideData; let channelIndex = 'index'">
             <div class="row left-right-margin-0 align-center padding-left-right-10px" (click)="toggleLiked(channelIndex)">
                 <div class="col-xs-2 left-right-padding-0">
                     <span class="" *ngIf="channel.is_liked"><img class="" src="../assets/images/liked.png" alt=""></span>
@@ -13,15 +13,19 @@
         </div>
     </div>
     <div id="programs-schedule" class="col-xs-10 line-height-80px left-right-padding-0 overflow-x-scroll">
-        <div class="row left-right-margin-0 width-7200px top-bottom-border border-color-darkgrey" *ngFor="let channel of channelsData; let channelIndex = 'index'">
+        <div class="row channels-program left-right-margin-0 width-7200px top-bottom-border border-color-darkgrey" *ngFor="let channel of gridGuideData; let channelIndex = 'index'">
             <div class="row time-line-wrapper left-right-margin-0 bottom-border border-color-darkgrey" *ngIf="channelIndex === 0">
-                <div class="" *ngFor="let time of timeArray">
+                <div class="time-line-array" *ngFor="let time of timeArray">
                     <div class="time-line-time border-right-left-darkgrey padding-left-right-10px float-left" [style.width]="'150px'">
+                    <!--<div class="time-line-time border-right-left-darkgrey padding-left-right-10px float-left"
+                        [style.width]="'150px'"
+                        [style.left]="5*(time.split(':')[0]*60 + time.split(':')[1].split(' ')[0]*1) + 'px'"
+                    >-->
                         {{time}}
                     </div>
                 </div>
             </div>
-            <div class="row relative-postion left-right-margin-0 width-7200px">
+            <div class="row relative-postion height-80px left-right-margin-0">
                 <div class="program-container" *ngFor="let program of channel.programs_list; let progIndex = 'index'">
                     <div class="program border-right-left-darkgrey padding-left-right-10px" [class.color-white]="progIndex === 0"
                         [style.width]="(5*(program.duration_hours*60))+'px'"

@@ -20,6 +20,9 @@ export class GridGuideComponent implements OnInit, AfterViewInit {
     differentialHour: any = new Date().getHours() > 12 ? new Date().getHours() - 12 : new Date().getHours() - 12;
     differentialMins: any = new Date().getMinutes() > 30 ? 30 : 0;
     timeArray: any[];
+    gridGuideData: any;
+    displayChannelLength: number = 7;
+    programsDisplayWidth: number = 1200;
     // timeArray: any[] = ['0:00 AM', '0:30 AM', '1:00 AM', '1:30 AM', '2:00 AM', '2:30 AM', '3:00 AM', '3:30 AM',
     //                     '4:00 AM', '4:30 AM', '5:00 AM', '5:30 AM', '6:00 AM', '6:30 AM', '7:00 AM',
     //                     '7:30 AM', '8:00 AM', '8:30 AM', '9:00 AM', '9:30 AM', '10: 00 AM', '10:30 AM',
@@ -54,8 +57,10 @@ export class GridGuideComponent implements OnInit, AfterViewInit {
         this.apiCaller.getChannelsData()
             .subscribe(
                 channelsData => {
-                    console.log(channelsData);
+                    // console.log(channelsData);
                     this.channelsData = channelsData.channels;
+                    this.gridGuideData = this.channelsData.slice(0, this.displayChannelLength);
+                    // console.log('this.channelsData after slice', this.channelsData);
                 }, error => this.errorMessage = <any>error
             );
     }
@@ -66,13 +71,38 @@ export class GridGuideComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit() {
         let self = this;
-        // To get the scroll position since we take 5px per minute.
-        // let currentTimeScrollValue = ((+(new Date().getHours()) * 60) + (+(new Date().getMinutes() > 30 ? 30 : 0)))*5;
-        // setTimeout(function () {
-        //     console.log(currentTimeScrollValue);
-        //     console.log($('#programs-schedule'));
-        //     $('#programs-schedule').scrollLeft(currentTimeScrollValue);
-        // }, 30);
+        let processingVerticalScroll: boolean;
+        let processingHorizontalScroll: boolean;
+        let lastScrollLeft: number = 0;
+        console.log('lastScrollLeft', lastScrollLeft);
+
+        $(function(){
+            $(document).scroll(function(e: any): any {
+                // console.log('document scroll detected');
+                if (processingVerticalScroll)
+                    return false;
+                if ($(window).scrollTop() >= ($(document).height() - $(window).height())*0.9){
+                    processingVerticalScroll = true;
+                    if (self.displayChannelLength < self.channelsData.length) {
+                        self.displayChannelLength += 2;
+                        self.gridGuideData = self.channelsData.slice(0, self.displayChannelLength);
+                        processingVerticalScroll = false;
+                    } else {
+                        self.gridGuideData = self.channelsData;
+                        processingVerticalScroll = false;
+                    }
+                }
+            });
+
+            $('#programs-schedule').scroll(function(e: any): any {
+                let documentScrollLeft = $('#programs-schedule').scrollLeft();
+                // console.log('program schedule scroll detected', documentScrollLeft);
+                if (documentScrollLeft > 1200 && self.programsDisplayWidth <= 7200) {
+                    // console.log('scroll x', documentScrollLeft);
+                    self.programsDisplayWidth +=300;
+                }
+            });
+        });
     }
 
     // @params startTime - start time value in minutes
@@ -80,12 +110,14 @@ export class GridGuideComponent implements OnInit, AfterViewInit {
         let interval = 30; //minutes interval
         let times = []; // time array
         let ap = ['AM', 'PM']; // AM-PM
+        let startTimePlus24Hrs = startTime + (24*60);
 
         //loop to increment the time and push results in array
-        for (let i=0;startTime<24*60; i++) {
+        for (let i=0; startTime < startTimePlus24Hrs; i++) {
             let hh = Math.floor(startTime/60); // getting hours of day in 0-24 format
             let mm = (startTime%60); // getting minutes of the hour in 0-55 format
-            times[i] = ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ' ' + ap[Math.floor(hh/12)]; // pushing data in array in [00:00 - 12:00 AM/PM format]
+            times[i] = ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ' ' + ap[(Math.floor(hh/12)%2)];
+            // times[i] = ("0" + (hh % 24)).slice(-2) + ':' + ("0" + mm).slice(-2); // pushing data in array in [00:00 - 12:00 AM/PM format]
             startTime = startTime + interval;
         }
         this.timeArray = times;
