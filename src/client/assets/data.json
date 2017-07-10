@@ -7,6 +7,15 @@
             "is_liked": true,
             "programs_list": [
                 {
+                    "program_id": "0",
+                    "program_name": "South Park 1AM Show",
+                    "start_time": "1:00 AM",
+                    "end_time": "1:30 AM",
+                    "duration_hours": "0.5",
+                    "is_recordable": true,
+                    "on_now": true,
+                    "is_new_content": false
+                }, {
                     "program_id": "1",
                     "program_name": "South Park",
                     "start_time": "1:00 PM",
@@ -153,7 +162,7 @@
                     "program_name": "College Football Scoreboard Presented by Honda",
                     "start_time": "6:00 PM",
                     "end_time": "8:15 PM",
-                    "duration_hours": "1.25",
+                    "duration_hours": "2.25",
                     "is_recordable": false,
                     "is_new_content": false,
                     "on_now": false,

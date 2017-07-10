@@ -17,8 +17,9 @@ export class GridGuideComponent implements OnInit, AfterViewInit {
     channelsData: any;
     errorMessage: string;
     currentTime: any = new Date(new Date().getTime()).toLocaleTimeString();
-    differentialHour: any = new Date().getHours() > 12 ? new Date().getHours() - 12 : new Date().getHours() - 12;
+    differentialHour: any = new Date().getHours() - 12;
     differentialMins: any = new Date().getMinutes() > 30 ? 30 : 0;
+    timeLineDiffrentialMinutes: number = 30;
     timeArray: any[];
     gridGuideData: any;
     displayChannelLength: number = 7;
@@ -79,27 +80,42 @@ export class GridGuideComponent implements OnInit, AfterViewInit {
         $(function(){
             $(document).scroll(function(e: any): any {
                 // console.log('document scroll detected');
-                if (processingVerticalScroll)
+                if (processingVerticalScroll) {
+                    console.log("returing since other operation is still in progress", $(window).scrollTop());
                     return false;
+                }
                 if ($(window).scrollTop() >= ($(document).height() - $(window).height())*0.9){
-                    processingVerticalScroll = true;
-                    if (self.displayChannelLength < self.channelsData.length) {
-                        self.displayChannelLength += 2;
-                        self.gridGuideData = self.channelsData.slice(0, self.displayChannelLength);
-                        processingVerticalScroll = false;
-                    } else {
-                        self.gridGuideData = self.channelsData;
-                        processingVerticalScroll = false;
-                    }
+                        console.log("processingVerticalScroll is false so working here", $(window).scrollTop());
+                        processingVerticalScroll = true;
+                        setTimeout(function(){
+                            if (self.displayChannelLength < self.channelsData.length) {
+                                    console.log("altering value of gridGuideData");
+                                    self.displayChannelLength += 2;
+                                    self.gridGuideData = self.channelsData.slice(0, self.displayChannelLength);
+                                    processingVerticalScroll = false;
+                            } else {
+                                    console.log("altering value of gridGuideData");
+                                    self.gridGuideData = self.channelsData;
+                                    processingVerticalScroll = false;
+                            }
+                        }, 1000);
                 }
             });
 
             $('#programs-schedule').scroll(function(e: any): any {
                 let documentScrollLeft = $('#programs-schedule').scrollLeft();
-                // console.log('program schedule scroll detected', documentScrollLeft);
-                if (documentScrollLeft > 1200 && self.programsDisplayWidth <= 7200) {
-                    // console.log('scroll x', documentScrollLeft);
-                    self.programsDisplayWidth +=300;
+                console.log('program schedule scroll detected', documentScrollLeft);
+                if (processingHorizontalScroll) {
+                    console.log("returing since other operation is still in progress", $(window).scrollTop());
+                    return false;
+                }
+                if (documentScrollLeft > 150 && self.programsDisplayWidth <= 7200) {
+                    processingHorizontalScroll = true;
+                    setTimeout(function(){
+                        console.log('scroll x', documentScrollLeft);
+                        self.programsDisplayWidth = self.programsDisplayWidth + 300;
+                        processingHorizontalScroll = false;
+                    }, 1000);
                 }
             });
         });
@@ -116,10 +132,13 @@ export class GridGuideComponent implements OnInit, AfterViewInit {
         for (let i=0; startTime < startTimePlus24Hrs; i++) {
             let hh = Math.floor(startTime/60); // getting hours of day in 0-24 format
             let mm = (startTime%60); // getting minutes of the hour in 0-55 format
-            times[i] = ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ' ' + ap[(Math.floor(hh/12)%2)];
+            times.push({
+                timeVal: ("0" + (hh % 12)).slice(-2) + ':' + ("0" + mm).slice(-2) + ' ' + ap[(Math.floor(hh/12)%2)]
+            });
             // times[i] = ("0" + (hh % 24)).slice(-2) + ':' + ("0" + mm).slice(-2); // pushing data in array in [00:00 - 12:00 AM/PM format]
             startTime = startTime + interval;
         }
         this.timeArray = times;
+        console.log(JSON.stringify(times));
     }
 }

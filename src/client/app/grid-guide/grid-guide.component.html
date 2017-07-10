@@ -1,7 +1,7 @@
 <div class="row left-right-margin-0 grid-guide">
-    <div class="col-xs-2 left-right-padding-0 line-height-80px">
+    <div class="col-xs-2 left-right-padding-0">
         <div class="channel top-bottom-border border-color-black" *ngFor="let channel of gridGuideData; let channelIndex = 'index'">
-            <div class="row left-right-margin-0 align-center padding-left-right-10px" (click)="toggleLiked(channelIndex)">
+            <div class="row left-right-margin-0 align-center channel-name-container" (click)="toggleLiked(channelIndex)">
                 <div class="col-xs-2 left-right-padding-0">
                     <span class="" *ngIf="channel.is_liked"><img class="" src="../assets/images/liked.png" alt=""></span>
                     <span class="" *ngIf="!channel.is_liked"><img class="" src="../assets/images/unliked.png" alt=""></span>
@@ -12,33 +12,43 @@
             </div>
         </div>
     </div>
-    <div id="programs-schedule" class="col-xs-10 line-height-80px left-right-padding-0 overflow-x-scroll">
-        <div class="row channels-program left-right-margin-0 top-bottom-border border-color-darkgrey" *ngFor="let channel of gridGuideData; let channelIndex = 'index'"
+    <div id="programs-schedule" class="col-xs-10 left-right-padding-0 overflow-x-scroll">
+        <div class="row channels-program overflow-x-hidden left-right-margin-0 top-bottom-border border-color-darkgrey" *ngFor="let channel of gridGuideData; let channelIndex = 'index'"
             [style.width]="programsDisplayWidth+'px'"
         >
             <div class="row time-line-wrapper left-right-margin-0 bottom-border border-color-darkgrey" *ngIf="channelIndex === 0">
-                <div class="time-line-array" *ngFor="let time of timeArray">
-                    <div class="time-line-time border-right-left-darkgrey padding-left-right-10px float-left" [style.width]="'150px'">
-                    <!--<div class="time-line-time border-right-left-darkgrey padding-left-right-10px float-left"
+                <div class="time-line-array" *ngFor="let time of timeArray | generateOffset: 'timeVal'">
+                    <div *ngIf="(time.timeVal != '00:00 PM') && (time.timeVal != '00:30 PM')" class="time-line-time border-right-left-darkgrey time-value-container float-left"
                         [style.width]="'150px'"
-                        [style.left]="5*(time.split(':')[0]*60 + time.split(':')[1].split(' ')[0]*1) + 'px'"
-                    >-->
-                        {{time}}
+                        [style.left]="time.offset"
+                    >
+                        {{time.timeVal}}
+                    </div>
+                    <div *ngIf="(time.timeVal === '00:00 PM')" class="time-line-time border-right-left-darkgrey time-value-container float-left"
+                        [style.width]="'150px'"
+                        [style.left]="time.offset"
+                    >
+                        12:00 PM
+                    </div>
+                    <div *ngIf="(time.timeVal === '00:30 PM')" class="time-line-time border-right-left-darkgrey time-value-container float-left"
+                        [style.width]="'150px'"
+                        [style.left]="time.offset"
+                    >
+                        12:30 PM
                     </div>
                 </div>
             </div>
-            <div class="row relative-postion height-80px left-right-margin-0">
-                <div class="program-container" *ngFor="let program of channel.programs_list; let progIndex = 'index'">
-                    <div class="program border-right-left-darkgrey padding-left-right-10px" [class.color-white]="progIndex === 0"
+            <div class="row relative-postion program-wrapper left-right-margin-0">
+                <div class="program-container" *ngFor="let program of channel.programs_list | generateOffset: 'start_time'; let progIndex = 'index'">
+                    <div class="program border-right-left-darkgrey program-data-container" [class.color-white]="progIndex === 0"
                         [style.width]="(5*(program.duration_hours*60))+'px'"
-                        [style.left]="(5*((differentialHour < 0 ? (program.start_time.split(':')[0]*60 + (differentialHour*-1)*60 - differentialMins)
-                        : (program.start_time.split(':')[0]*60 - differentialHour*60 - differentialMins)) + (program.start_time.split(':')[1].split(' ')[0]*1)))+'px'"
+                        [style.left]="program.offset"
                         id="{{'program-'+channel.channel_id+'-'+program.program_id}}"
                     >
-                        <div class="row left-right-margin-0 line-height-50px clipped-title" title="{{program.program_name}} Timings:{{program.start_time}} to {{program.end_time}}">
-                            {{program.program_name}}
+                        <div class="row left-right-margin-0 program-name clipped-title" title="{{program.program_name}} Timings:{{program.start_time}} to {{program.end_time}}">
+                            {{program.program_name}} {{programsDisplayWidth+'px'}}
                         </div>
-                        <div class="row left-right-margin-0 line-height-30px">
+                        <div class="row left-right-margin-0 program-data">
                             <span *ngIf="program.is_empty">&nbsp;</span>
                             <span class="on-now-icon" *ngIf="program.on_now"><img class="utility-image" src="../assets/images/on-now-icon.png" alt=""></span>
                             <span class="record-icon" *ngIf="program.is_recordable"><img class="utility-image" src="../assets/images/record-icon.png" alt=""></span>
