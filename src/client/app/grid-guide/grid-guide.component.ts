@@ -85,20 +85,20 @@ export class GridGuideComponent implements OnInit, AfterViewInit {
                     return false;
                 }
                 if ($(window).scrollTop() >= ($(document).height() - $(window).height())*0.9){
-                        console.log("processingVerticalScroll is false so working here", $(window).scrollTop());
-                        processingVerticalScroll = true;
-                        setTimeout(function(){
-                            if (self.displayChannelLength < self.channelsData.length) {
-                                    console.log("altering value of gridGuideData");
-                                    self.displayChannelLength += 2;
-                                    self.gridGuideData = self.channelsData.slice(0, self.displayChannelLength);
-                                    processingVerticalScroll = false;
-                            } else {
-                                    console.log("altering value of gridGuideData");
-                                    self.gridGuideData = self.channelsData;
-                                    processingVerticalScroll = false;
-                            }
-                        }, 1000);
+                    console.log("processingVerticalScroll is false so working here", $(window).scrollTop());
+                    processingVerticalScroll = true;
+                    setTimeout(function() {
+                        if (self.displayChannelLength < self.channelsData.length) {
+                            console.log("altering value of gridGuideData");
+                            self.displayChannelLength += 2;
+                            self.gridGuideData = self.channelsData.slice(0, self.displayChannelLength);
+                            processingVerticalScroll = false;
+                        } else {
+                            console.log("altering value of gridGuideData");
+                            self.gridGuideData = self.channelsData;
+                            processingVerticalScroll = false;
+                        }
+                    }, 1000);
                 }
             });
 
